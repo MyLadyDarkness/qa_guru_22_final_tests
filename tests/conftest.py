@@ -16,29 +16,29 @@ selenoid_login = os.getenv("SELENOID_LOGIN")
 selenoid_pass = os.getenv("SELENOID_PASS")
 selenoid_url = os.getenv("SELENOID_URL")
 
-options = Options()
-selenoid_capabilities = {
-    "browserName": "chrome",
-    "browserVersion": "100.0",
-    "selenoid:options": {
-        "enableVNC": True,
-        "enableVideo": True
-    }
-}
-
 
 @pytest.fixture(scope="function", autouse=True)
-def browser_settings():
+def selenoid_browser():
+    options = Options()
+    selenoid_capabilities = {
+        "browserName": "chrome",
+        "browserVersion": "100.0",
+        "selenoid:options": {
+            "enableVNC": True,
+            "enableVideo": True
+        }
+    }
+
+    options.capabilities.update(selenoid_capabilities)
+    driver = webdriver.Remote(
+        command_executor=selenoid_url,
+        options=options)
+
+    browser.config.driver = driver
     browser.config.base_url = 'https://telega.in'
     browser.config.window_height = 1500
     browser.config.window_width = 1500
+
     yield
+
     browser.quit()
-
-
-options.capabilities.update(selenoid_capabilities)
-driver = webdriver.Remote(
-    command_executor=selenoid_url,
-    options=options)
-
-browser.config.driver = driver
