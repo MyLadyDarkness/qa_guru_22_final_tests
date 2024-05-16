@@ -26,11 +26,10 @@ def selenoid_browser():
         }
     }
 
+    options.capabilities.update(selenoid_capabilities)
     selenoid_login = os.getenv("SELENOID_LOGIN")
     selenoid_pass = os.getenv("SELENOID_PASS")
     selenoid_url = os.getenv("SELENOID_URL")
-
-    options.capabilities.update(selenoid_capabilities)
     driver = webdriver.Remote(
         command_executor=f"https://{selenoid_login}:{selenoid_pass}@{selenoid_url}",
         options=options)
