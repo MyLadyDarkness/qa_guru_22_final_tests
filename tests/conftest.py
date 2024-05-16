@@ -6,6 +6,8 @@ from selene import browser
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 
+from utils import attach
+
 
 @pytest.fixture(scope="session", autouse=True)
 def load_env():
@@ -31,7 +33,7 @@ def selenoid_browser():
 
     options.capabilities.update(selenoid_capabilities)
     driver = webdriver.Remote(
-        command_executor=selenoid_url,
+        command_executor=f"https://${selenoid_login}:${selenoid_pass}@${selenoid_url}",
         options=options)
 
     browser.config.driver = driver
@@ -40,5 +42,9 @@ def selenoid_browser():
     browser.config.window_width = 1500
 
     yield
+
+    attach.add_screenshot(browser)
+    attach.add_logs(browser)
+    attach.add_html(browser)
 
     browser.quit()
