@@ -33,7 +33,7 @@ def selenoid_browser():
 
     options.capabilities.update(selenoid_capabilities)
     driver = webdriver.Remote(
-        command_executor=f"https://${selenoid_login}:${selenoid_pass}@${selenoid_url}",
+        command_executor=f"https://{selenoid_login}:{selenoid_pass}@{selenoid_url}",
         options=options)
 
     browser.config.driver = driver
