@@ -4,8 +4,10 @@ from selene import browser, have
 class BaseSearch:
 
     def search_request(self, search_request):
-        browser.element('input[type=search]').type(search_request)
-        browser.element('input[type=search]').press_enter()
+        browser.element('#query[name=query]').type(search_request)
+        browser.element('#query[name=query]').press_enter()
+        return self
 
-    def check_search_security(self):
-        browser.element('#challenge-running').should(have.text("Подтвердите, что вы человек"))
+    def check_search_results(self, search_request):
+        browser.all('.results-list-item-link').first.should(have.text(search_request))
+        return self
