@@ -7,3 +7,12 @@
 <li>test_analytics_filter -проверяет, что фильтр выдает корректные результаты</li>
 <li>test_add_channel - проверяет, что нельзя добавить канал с пустыми полями</li>
 </ul>
+
+#### История запусков тестового набора
+<img src="screenshots/history_of_runs.jpg" height="100">
+
+#### Пример выполнения одного теста
+<img src="screenshots/example_of_run.jpg" height="100">
+
+#### Сообщение в телеграмм о выполнении тестов
+<img src="screenshots/tg_notifications.jpg" height="100">
