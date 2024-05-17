@@ -1,39 +1,14 @@
-import allure
-from selene import browser
-from data.analytics import Analytics
-from model.pages.open_page import OpenPage
-from utils import attach
+from pages.analytics import analytics
+from pages.open_page import page
 
 
 def test_analytics_filter():
-    page = OpenPage()
-
-    with allure.step("Открывается страница аналитики"):
-        page.open_analytics()
-
-        analytics = Analytics()
-
-    with allure.step("Вводятся данные для фильтрации"):
-        analytics.filter_request("leod")
-
-    with allure.step("Проверяется, что фильтр выдает хотя бы один релевантный результат"):
-        analytics.check_filter("leod")
-        attach.add_screenshot(browser)
-        attach.add_logs(browser)
-        attach.add_html(browser)
+    page.open_analytics()
+    analytics.filter_request("leod")
+    analytics.check_filter("leod")
 
 
 def test_add_channel():
-    page = OpenPage()
-
-    with allure.step("Открывается страница аналитики"):
-        page.open_analytics()
-
-    channel = Analytics()
-
-    with allure.step("Открывается форма добавления канала"):
-        channel.add_channel()
-
-    with allure.step("Проверяется, что нельзя добавить канал без ссылки"):
-        channel.check_add_channel()
-        attach.add_screenshot(browser)
+    page.open_analytics()
+    analytics.add_channel()
+    analytics.check_add_channel()
