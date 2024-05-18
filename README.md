@@ -66,4 +66,6 @@
 #### Сообщение в телеграмм 
 <img src="resources/images/tg_notifications.jpg" height="300">
 
+#### Видео
+![](resources/images/test_analytics_filter.gif)
 ---
