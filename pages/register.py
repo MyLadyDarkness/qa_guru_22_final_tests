@@ -12,7 +12,6 @@ class Register:
             browser.element('input[name="user[contact]"').type('1234')
             browser.element('#user_register_news_subscription').click()
             browser.element('#sign_up_submit_button').click()
-        time.sleep(10)
 
     def check_reg_error(self):
         with allure.step("Нельзя зарегистрироваться с неправильным email"):
