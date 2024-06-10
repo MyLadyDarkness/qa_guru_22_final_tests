@@ -29,5 +29,10 @@ class OpenPage:
             browser.open('/analytics')
         return self
 
+    def open_faq(self):
+        with allure.step("Открывается страница FAQ"):
+            browser.open('/faq')
+        return self
+
 
 page = OpenPage()
