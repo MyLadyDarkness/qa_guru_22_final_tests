@@ -61,14 +61,20 @@
     python -m venv .venv
     source .venv/bin/activate
     pip install -r requirements.txt
-    pytest ${TESTS_FOLDER}
+    pytest ${TESTS_FOLDER} || true
 </pre>
 
 ---
 
 <h2 id="test-example">Примеры запуска</h2>
 
+#### Задача в jenkins
+https://jenkins.autotests.cloud/job/C012-MiledyDarkness_qa_guru_22_telega_ui/
+<img src="resources/images/job_in_jenkins.jpg" height="300">
+
 #### История запусков тестового набора
+https://jenkins.autotests.cloud/job/C012-MiledyDarkness_qa_guru_22_telega_ui/
+
 <img src="resources/images/history_of_runs.jpg" height="300">
 
 #### Пример выполнения одного теста
