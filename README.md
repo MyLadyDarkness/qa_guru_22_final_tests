@@ -27,6 +27,7 @@
     <img title="Jenkins" width="40" height="40" src="resources/images/jenkins-original.svg">
     <img title="Selenoid" width="40" src="resources/images/selenoid.png">
     <img title="Allure" width="40" src="resources/images/allure.png">
+    <img title="AllureTestOps" width="40" src="resources/images/allure_testops.svg">
     <img title="Github" width="40" src="resources/images/github-original-wordmark.svg">
     <img title="Telegram" width="40" src="resources/images/telegram.png">
 </div>
