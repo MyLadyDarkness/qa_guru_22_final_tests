@@ -68,17 +68,28 @@
 
 <h2 id="test-example">Примеры запуска</h2>
 
-#### Задача в jenkins
+<h3>Jenkins</h3>
+
 https://jenkins.autotests.cloud/job/C012-MiledyDarkness_qa_guru_22_telega_ui/
 <img src="resources/images/job_in_jenkins.jpg" height="300">
 
 #### История запусков тестового набора
-https://jenkins.autotests.cloud/job/C012-MiledyDarkness_qa_guru_22_telega_ui/
-
+https://jenkins.autotests.cloud/job/C012-MiledyDarkness_qa_guru_22_telega_ui/allure/
 <img src="resources/images/history_of_runs.jpg" height="300">
 
 #### Пример выполнения одного теста
 <img src="resources/images/example_of_run.jpg" height="300">
+
+---
+<h3>Allure TestOps</h3>
+
+https://allure.autotests.cloud/project/4277/dashboards
+<img src="resources/images/allure_testops_job.jpg" height="300">
+
+#### Совместное хранение ручных и автоматизированных тест-кейсов
+<img src="resources/images/allure_testops_cases.jpg" height="300">
+
+---
 
 #### Сообщение в телеграмм 
 <img src="resources/images/tg_notifications.jpg" height="300">
