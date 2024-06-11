@@ -84,6 +84,7 @@ https://jenkins.autotests.cloud/job/C012-MiledyDarkness_qa_guru_22_telega_ui/all
 <h3>Allure TestOps</h3>
 
 https://allure.autotests.cloud/project/4277/dashboards
+
 <img src="resources/images/allure_testops_job.jpg" height="300">
 
 #### Совместное хранение ручных и автоматизированных тест-кейсов
