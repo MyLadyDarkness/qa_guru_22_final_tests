@@ -2,6 +2,7 @@ import allure
 from selene import browser, have
 
 
+@allure.feature("Поиск в базе знаний")
 class BaseSearch:
 
     def search_request(self, search_request):

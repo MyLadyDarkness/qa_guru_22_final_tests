@@ -1,5 +1,3 @@
-from selene import browser, by, have
-
 from pages.faq import faq
 from pages.open_page import page
 

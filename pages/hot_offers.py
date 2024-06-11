@@ -2,6 +2,7 @@ import allure
 from selene import browser, have
 
 
+@allure.story("Горячие предложения")
 class HotOffers:
     def load_more(self):
         with allure.step("Загрузить больше горячих предложений"):

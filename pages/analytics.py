@@ -2,6 +2,7 @@ import allure
 from selene import browser, have
 
 
+@allure.feature("Аналитика")
 class Analytics:
 
     def filter_request(self, filter_request):

@@ -1,7 +1,7 @@
 import allure
 from selene import browser, have
 
-
+@allure.story("Форма входа")
 class Login:
 
     def submit_form(self):

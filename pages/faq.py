@@ -2,6 +2,7 @@ import allure
 from selene import browser, have, by
 
 
+@allure.feature("Раздел FAQ")
 class Faq:
 
     def click_faq_item(self):

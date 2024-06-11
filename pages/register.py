@@ -4,6 +4,7 @@ import allure
 from selene import browser, have
 
 
+@allure.story("Форма регистрации")
 class Register:
 
     def fill_form(self):
@@ -15,7 +16,8 @@ class Register:
 
     def check_reg_error(self):
         with allure.step("Нельзя зарегистрироваться с неправильным email"):
-            browser.element('.item.email.error').element('.error_wrapper').should(have.text("Введите email в правильном формате"))
+            browser.element('.item.email.error').element('.error_wrapper').should(
+                have.text("Введите email в правильном формате"))
 
 
 registration = Register()
