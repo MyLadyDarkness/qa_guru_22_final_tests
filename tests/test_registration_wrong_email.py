@@ -1,8 +1,8 @@
 import allure
 from allure_commons.types import Severity
 
-from qa_guru_22_final_tests_ui.pages.register_page import registration
-from qa_guru_22_final_tests_ui.pages.open_page import page
+from telega_project_tests_ui.pages.register_page import registration
+from telega_project_tests_ui.pages.open_page import page
 
 
 @allure.epic('Registration')

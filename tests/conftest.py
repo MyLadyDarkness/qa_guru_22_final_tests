@@ -6,7 +6,7 @@ from selene import browser
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 
-from qa_guru_22_final_tests_ui.utils import attach
+from telega_project_tests_ui.utils import attach
 
 
 @pytest.fixture(scope="session", autouse=True)

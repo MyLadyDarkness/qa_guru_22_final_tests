@@ -1,8 +1,8 @@
 import allure
 from allure_commons.types import Severity
 
-from qa_guru_22_final_tests_ui.pages.knowledge_search_page import search
-from qa_guru_22_final_tests_ui.pages.open_page import page
+from telega_project_tests_ui.pages.knowledge_search_page import search
+from telega_project_tests_ui.pages.open_page import page
 
 
 @allure.epic('Knowledge base')
