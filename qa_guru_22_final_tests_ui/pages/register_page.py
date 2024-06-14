@@ -1,5 +1,3 @@
-import time
-
 import allure
 from selene import browser, have
 

@@ -1,6 +1,7 @@
 import allure
 from selene import browser, have
 
+
 @allure.story("Форма входа")
 class Login:
 
@@ -10,10 +11,8 @@ class Login:
 
     def check_login_error(self):
         with allure.step("Нельзя отправить форму с пустыми данными"):
-            #browser.element('[class="error_wrapper"]').should(have.text("Неверный логин или пароль"))
+            # browser.element('[class="error_wrapper"]').should(have.text("Неверный логин или пароль"))
             browser.element('.input_auth_code').element('.error_wrapper').should(have.text("Неверный логин или пароль"))
 
-
-#input_auth_code
 
 login = Login()

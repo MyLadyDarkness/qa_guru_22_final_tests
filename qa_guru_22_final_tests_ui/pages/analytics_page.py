@@ -18,7 +18,7 @@ class Analytics:
             browser.element('[href*="add_new_channel"]').click()
             browser.element('.submit').click()
 
-    def check_add_channel(self):
+    def check_add_channel_no_link(self):
         with allure.step("Проверяется, что нельзя добавить канал без ссылки"):
             browser.element('.error_text').should(have.text("Поле не может быть пустым"))
 

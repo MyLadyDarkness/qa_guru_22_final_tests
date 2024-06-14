@@ -41,7 +41,7 @@
 <li>Поиск по базе знаний</li>
 <li>Фильтрация в разделе Аналитика</li>
 <li>Попытка добавления канала без ссылки</li>
-<li>Проверка, что вразделе FAQ отображается нужный текст</li>
+<li>Проверка, что в разделе FAQ отображается нужный текст</li>
 <li>Проверка загрузки горячих предложений</li>    
 </ul>
 
@@ -61,7 +61,7 @@
     python -m venv .venv
     source .venv/bin/activate
     pip install -r requirements.txt
-    pytest ${TESTS_FOLDER} || true
+    pytest ${TESTS_FOLDER}
 </pre>
 
 ---
@@ -71,29 +71,29 @@
 <h3>Jenkins</h3>
 
 https://jenkins.autotests.cloud/job/C012-MiledyDarkness_qa_guru_22_telega_ui/
-<img src="resources/images/job_in_jenkins.jpg" height="300">
+<img src="resources/images/job_in_jenkins.jpg" height="500">
 
 #### История запусков тестового набора
 https://jenkins.autotests.cloud/job/C012-MiledyDarkness_qa_guru_22_telega_ui/allure/
-<img src="resources/images/history_of_runs.jpg" height="300">
+<img src="resources/images/history_of_runs.jpg" height="500">
 
 #### Пример выполнения одного теста
-<img src="resources/images/example_of_run.jpg" height="300">
+<img src="resources/images/example_of_run.jpg" height="500">
 
 ---
 <h3>Allure TestOps</h3>
 
 https://allure.autotests.cloud/project/4277/dashboards
 
-<img src="resources/images/allure_testops_job.jpg" height="300">
+<img src="resources/images/allure_testops_job.jpg" height="500">
 
 #### Совместное хранение ручных и автоматизированных тест-кейсов
-<img src="resources/images/allure_testops_cases.jpg" height="300">
+<img src="resources/images/allure_testops_cases.jpg" height="500">
 
 ---
 
 #### Сообщение в телеграмм 
-<img src="resources/images/tg_notifications.jpg" height="300">
+<img src="resources/images/tg_notifications.jpg" height="500">
 
 #### Видео
 ![](resources/images/test_analytics_filter.gif)
