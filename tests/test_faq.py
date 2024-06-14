@@ -1,5 +1,4 @@
 import allure
-import pytest
 from allure_commons.types import Severity
 
 from telega_project_tests_ui.pages.faq_page import faq

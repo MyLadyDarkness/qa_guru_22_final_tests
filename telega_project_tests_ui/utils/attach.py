@@ -4,25 +4,21 @@ import allure
 from allure_commons.types import AttachmentType
 
 
-# Скриншоты
 def add_screenshot(browser):
     png = browser.driver.get_screenshot_as_png()
     allure.attach(body=png, name='screenshot', attachment_type=AttachmentType.PNG, extension='.png')
 
 
-# логи
 def add_logs(browser):
     log = "".join(f'{text}\n' for text in browser.driver.get_log(log_type='browser'))
     allure.attach(log, 'browser_logs', AttachmentType.TEXT, '.log')
 
 
-# html-код страницы
 def add_html(browser):
     html = browser.driver.page_source
     allure.attach(html, 'page_source', AttachmentType.HTML, '.html')
 
 
-# video
 def add_video(browser):
     selenoid_url = os.getenv("SELENOID_URL")
     video_url = f"https://{selenoid_url}/video/" + browser.driver.session_id + ".mp4"
